@@ -1,0 +1,10 @@
+<div>
+    <input type="button" value="Increment"  ng-click="Task1Ctrl.incrementValue()"    />  
+</div>
+<div>
+   <ul>
+        <li ng-repeat="count in Task1Ctrl.data.counterValues track by $index "  >
+            {{count}}
+        </li>
+   </ul>
+</div>

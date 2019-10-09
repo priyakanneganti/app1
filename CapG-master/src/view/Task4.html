@@ -1,0 +1,28 @@
+<div class="row" >
+    <div class="col-md-12" >
+        <table class="table table-bordered table-striped" >
+            <thead>
+                <th> Sl No.</th>
+                <th> Product Name</th>
+                <th> Product Code</th>
+            </thead>
+            <tbody>
+                <tr ng-repeat="prod in Task4Ctrl.data.serviceData" >
+                    <td>{{$index}}</td>
+                    <td>{{prod.prodName}}</td>
+                    <td>{{prod.code}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<div class="row" >
+    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 {{Task3Ctrl.data.rotateClass}}"  ng-repeat="img in Task3Ctrl.data.imageList"   >
+        <img src="{{img}}"  width="300"  height="300"   ></img> 
+    </div>
+</div>
+<div class="row" >
+    <div class="col-md-3" ng-show="Task3Ctrl.data.imageList.length>0"  >
+        <input type="button"  class="bt btn-primary" ng-click="Task3Ctrl.rotateImg()" value="Rotate Image" />
+    </div>
+</div>

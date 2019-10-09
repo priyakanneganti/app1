@@ -1,0 +1,50 @@
+<div class="panel panel-primary">
+    <div class="panel-heading">Add User</div>
+    <div class="panel-body">
+        <div class="row">
+            <div class="col-md-12">
+                <label>
+                    User ID <input type="text" class="form-control" placeholder="User Id" [(ngModel)]="userID" maxlength="20"   />
+              </label>
+              <div class="alert alert-danger" [hidden]="userError==''"  >
+                <strong>{{userError}}</strong>
+              </div>
+            </div>
+            <div class="col-md-4">
+                <label>
+                    Email Id <input type="text" class="form-control" placeholder="Email Id" [(ngModel)]="emailId"   />
+              </label>
+              <div class="alert alert-danger" [hidden]="emailError==''"  >
+                <strong>{{emailError}}</strong>
+              </div>
+            </div>
+            <div class="col-md-12">
+                <label>
+                   Age <input type="text" class="form-control" placeholder="Age" [(ngModel)]="age"   />
+              </label>
+              <div class="alert alert-danger" [hidden]="ageError==''"  >
+                <strong>{{ageError}}</strong>
+              </div>
+            </div>
+            <div class="col-md-2">
+                <input type="button" class="btn btn-primary" value="Add User" [disabled]="firstName=='' || lastName=='' || age=='' " (click)="addUser()"     />
+            </div>
+        </div>
+        <table class="table table-bordered table-striped" [hidden]="userList.length<=0">
+            <thead>
+                <th class="text-center">Sl No.</th>
+                <th class="text-center">First Name</th>
+                <th class="text-center">Last Name</th>
+                <th class="text-center">Age</th>
+            </thead>
+            <tbody>
+                <tr *ngFor="let user of userList let i=index">
+                    <td>{{i+1}}</td>
+                    <td>{{user.userID}}</td>
+                    <td>{{user.emailId}}</td>
+                    <td>{{user.age}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

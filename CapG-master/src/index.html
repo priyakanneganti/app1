@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html ng-app="myapp" >
+<head>
+    <meta charset="UTF-8">  
+  
+    <link rel="stylesheet" type="text/css" href="../modules/bootstrap/dist/css/bootstrap.css" ></link>
+    <link rel="stylesheet" type="text/css" href="css/custom.css" ></link>
+    <title>Assignment</title>
+</head>
+<body>
+    <div class="row" >
+        <div class="col-md-3"  >
+            <ul>
+                <li>
+                    <a href="#/task1" >Task 1</a>
+                </li>
+                <li>
+                    <a href="#/task2" >Task 2</a>
+                </li>
+                <li>
+                    <a href="#/task3" >Task 3</a>
+                </li>
+                <li>
+                    <a href="#/task4" >Task 4</a>
+                </li>
+            </ul>
+        </div>
+        <div class="col-md-9" ng-view >
+        </div>
+    </div>
+    <script src="../modules/angular/angular.js"  ></script> 
+    <script src="../modules/angular-route/angular-route.js"  ></script> 
+    <script src="main.js"  ></script> 
+    <script src="controller/Task1Ctrl.js"  ></script> 
+    <script src="controller/Task2Ctrl.js"  ></script> 
+    <script src="controller/Task3Ctrl.js"  ></script> 
+    <script src="controller/Task4Ctrl.js"  ></script> 
+</body>
+</html>
